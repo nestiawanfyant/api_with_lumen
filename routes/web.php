@@ -20,3 +20,7 @@ $router->get('/', function () use ($router) {
 });
 
 $router->get('/webScraping', 'webScrapingController@index');
+
+$router->get('/key', function() {
+    return \Illuminate\Support\Str::random(32);
+});
